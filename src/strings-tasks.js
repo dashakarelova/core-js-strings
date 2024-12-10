@@ -19,8 +19,11 @@
  *   getStringLength(null) => 0
  *   getStringLength(undefined) => 0
  */
-function getStringLength(/* value */) {
-  throw new Error('Not implemented');
+function getStringLength(value) {
+  if (value === undefined || value === null || value === '') {
+    return 0;
+  }
+  return value.length;
 }
 
 /**
@@ -130,8 +133,8 @@ function removeTrailingWhitespaces(value) {
  *   repeatString('', 3) => ''
  *   repeatString('abc', -2) => ''
  */
-function repeatString(str, times) {
-  return str.repeat(str, times);
+function repeatString(/* str, times */) {
+  throw new Error('Not implemented');
 }
 
 /**
